@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sistema de nacionalidade </title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    <p> Por favor informe o seu país na caixa de texto abaixo!</p>
+    País de nascimento <input type="string" name="txtpaís" id="txtpaís">
+    <input type="button" value="verificar" onclick="ver()">
+    <div id = 'res'>
+    </div>
+    <script>
+        function ver(){
+        var txtp = window.document.querySelector(`input#txtpaís`)
+        var país = String(txtp.value)
+        var res = window.document.querySelector(`div#res`)
+        res.innerHTML = `Você nasceu em ${país}!`
+        if(país=='Brasil'){
+            res.innerHTML += `Você é brasileira!`
+        }else{
+            res.innerHTML += `Você é estrangeira!`
+        }
+    }
+    </script>
+    
+    
+</body>
+</html>
